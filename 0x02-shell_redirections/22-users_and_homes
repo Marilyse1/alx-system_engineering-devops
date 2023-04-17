@@ -1,4 +1,7 @@
 #!/bin/bash
-while IFS=: read -r user _ _ _ home _; do
+cat /etc/passwd
+
+
+while IFS=: read -r user _ _ _ _ home _; do
     echo "${user}: ${home}"
 done < /etc/passwd | sort
