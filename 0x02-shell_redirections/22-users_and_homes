@@ -1,2 +1,2 @@
 #!/bin/bash
-sed 's/:/ /g' /etc/passwd | awk '{print $1,":",$6}' | sort
+while IFS=: read -r user _ _ _ home _; do echo "${user}: ${home}"; done < /etc/passwd | sort
