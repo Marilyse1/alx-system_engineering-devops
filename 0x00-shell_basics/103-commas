@@ -1,0 +1,2 @@
+#!/bin/bash
+ls -A1 | { ls -1d . ..; printf '%s\n' $(ls -p | grep -v /); }
